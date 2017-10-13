@@ -1,0 +1,234 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.uww.tyan.lab2.SignupActivity">
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:visibility="gone" />
+
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="0dp"-->
+        <!--android:layout_marginTop="0dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--tools:context="com.uww.tyan.lab2.LoginActivity">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/log"-->
+            <!--style="@android:style/Widget.Material.Light.Button.Borderless.Small"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:text="log" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/history"-->
+            <!--style="@android:style/Widget.Material.Light.Button.Borderless.Small"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:text="history" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/score"-->
+            <!--style="@android:style/Widget.Material.Light.Button.Borderless.Small"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:text="score" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/settings"-->
+            <!--style="@android:style/Widget.Material.Light.Button.Borderless.Small"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:text="settings" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/name_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/already"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_gravity="right"
+                android:text="I already have an account"
+                android:textAllCaps="false" />
+
+
+
+
+            <android.support.v7.widget.FitWindowsLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="289dp"
+                    android:layout_height="wrap_content"
+                    android:text="Username:" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/character_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="61dp"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </android.support.v7.widget.FitWindowsLinearLayout>
+
+
+            <TextView
+                android:id="@+id/nametest"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text=""/>
+
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Program:" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RadioButton android:id="@+id/ugrad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Undergraduate"
+                        android:onClick="onRadioButtonClicked"/>
+                    <RadioButton android:id="@+id/grad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Graduate"
+                        android:onClick="onRadioButtonClicked"/>
+                </RadioGroup>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/nametest"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="38dp"-->
+                <!--android:text="" />-->
+
+            <!--<android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>-->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose a password:" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Click picture below to share your picture:" />
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="78dp"
+                android:layout_height="74dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="128dp"
+                android:clickable="true"
+                android:src="@android:drawable/ic_menu_camera"
+                tools:layout_editor_absoluteY="81dp" />
+
+            <TextView
+                android:id="@+id/net_err"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:text="" />
+
+            <Button
+                android:id="@+id/save"
+                style="?android:textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
